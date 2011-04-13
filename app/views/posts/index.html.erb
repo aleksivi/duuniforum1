@@ -1,0 +1,55 @@
+<h1>Listing posts</h1>
+
+<table>
+  <tr>
+    <th>Employer</th>
+    <th>Homepage</th>
+    <th>Contact person</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Job title</th>
+    <th>Industry</th>
+    <th>Focusing section</th>
+    <th>Description</th>
+    <th>Street address</th>
+    <th>Post number</th>
+    <th>Office</th>
+    <th>Country</th>
+    <th>Job length</th>
+    <th>Job type</th>
+    <th>Job starts</th>
+    <th>Post ends</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posts.each do |post| %>
+  <tr>
+    <td><%= post.employer %></td>
+    <td><%= post.homepage %></td>
+    <td><%= post.contact_person %></td>
+    <td><%= post.email %></td>
+    <td><%= post.phone %></td>
+    <td><%= post.job_title %></td>
+    <td><%= post.industry_id %></td>
+    <td><%= post.focusing_section_id %></td>
+    <td><%= post.description %></td>
+    <td><%= post.street_address %></td>
+    <td><%= post.post_number %></td>
+    <td><%= post.office %></td>
+    <td><%= post.country_id %></td>
+    <td><%= post.job_length %></td>
+    <td><%= post.job_type %></td>
+    <td><%= post.job_starts %></td>
+    <td><%= post.post_ends %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Post', new_post_path %>
