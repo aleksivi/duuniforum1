@@ -32,7 +32,6 @@ resources :users do
 
   get "users/new"
  match '/focusing_sections/for_industryid/:id' => 'focusing_sections#for_industryid'
-
   match '/signup',  :to => 'users#new'
   match '/signin',  :to => 'sessions#new'
   match '/signout', :to => 'sessions#destroy'
