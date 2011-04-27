@@ -1,4 +1,4 @@
-SampleApp::Application.routes.draw do
+Duuniforum::Application.routes.draw do
  
 
   resources :countries
